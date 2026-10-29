@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b263b"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00c6ff"/>
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ef7d"/>
+      <stop offset="100%" stop-color="#11998e"/>
+    </linearGradient>
+
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b92b27"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      fill: #38ef7d;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .tag-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+
+    /* Subtle, smooth dynamic floating animation in background */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.08); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-12px) translateX(6px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
+    @keyframes sweepLine {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .pulse-orb-1 {
+      animation: pulseGlow 7s ease-in-out infinite;
+      transform-origin: 200px 100px;
+    }
+    .pulse-orb-2 {
+      animation: pulseGlow 9s ease-in-out infinite 2s;
+      transform-origin: 1050px 240px;
+    }
+    .float-item-1 {
+      animation: floatParticle 6s ease-in-out infinite;
+    }
+    .float-item-2 {
+      animation: floatParticle 8s ease-in-out infinite 1.5s;
+    }
+    .float-item-3 {
+      animation: floatParticle 7s ease-in-out infinite 3s;
+    }
+    .data-flow {
+      stroke-dasharray: 20, 10;
+      animation: sweepLine 12s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Cosmic Canvas Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGradient)"/>
+  <rect width="1200" height="360" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- Subtle Grid Overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Dynamic Glowing Ambient Orbs (Strictly Background Layer) -->
+  <circle class="pulse-orb-1" cx="220" cy="90" r="140" fill="#00f2fe" opacity="0.15" filter="url(#glow)"/>
+  <circle class="pulse-orb-2" cx="1020" cy="220" r="170" fill="#38ef7d" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="600" cy="330" r="160" fill="#4facfe" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Dynamic Circuit / Transaction Flow Lines in Background -->
+  <path class="data-flow" d="M 60 290 Q 200 250 350 280 T 650 260 T 950 290 T 1140 250" fill="none" stroke="#4facfe" stroke-width="2" stroke-opacity="0.35"/>
+  <path class="data-flow" d="M 120 70 Q 300 110 500 80 T 800 110 T 1080 70" fill="none" stroke="#38ef7d" stroke-width="1.5" stroke-opacity="0.25"/>
+
+  <!-- Floating Dynamic Tech Decorative Badges (Far Right Background) -->
+  <g class="float-item-1" opacity="0.75">
+    <rect x="940" y="45" width="200" height="42" rx="10" fill="url(#cardBg)" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="965" cy="66" r="6" fill="#00f2fe"/>
+    <text x="982" y="71" class="tag-text">Omnichannel Sync</text>
+  </g>
+
+  <g class="float-item-2" opacity="0.75">
+    <rect x="980" y="105" width="170" height="42" rx="10" fill="url(#cardBg)" stroke="#38ef7d" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="1005" cy="126" r="6" fill="#38ef7d"/>
+    <text x="1022" y="131" class="tag-text">Contactless POS</text>
+  </g>
+
+  <g class="float-item-3" opacity="0.75">
+    <rect x="910" y="165" width="230" height="42" rx="10" fill="url(#cardBg)" stroke="#4facfe" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="935" cy="186" r="6" fill="#4facfe"/>
+    <text x="952" y="191" class="tag-text">Offline-First Engine</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Guaranteed pristine visibility & crisp contrast -->
+  <g transform="translate(70, 0)">
+    <!-- Top Category Pill -->
+    <g transform="translate(0, 52)">
+      <rect width="215" height="28" rx="14" fill="#11998e" fill-opacity="0.25" stroke="#38ef7d" stroke-opacity="0.6" stroke-width="1"/>
+      <circle cx="16" cy="14" r="4" fill="#38ef7d"/>
+      <text x="28" y="19" class="badge-text">RETAIL POS ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Header -->
+    <text x="0" y="132" class="title-text">
+      Retail Point Of Sale <tspan fill="url(#primaryGlow)">(POS)</tspan>
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="172" class="subtitle-text">
+      Curated index of SaaS checkout platforms, modern payment terminals, and open-source POS engines
+    </text>
+    <text x="0" y="198" class="subtitle-text">
+      Empowering unified omnichannel retail, offline caching, and real-time inventory management.
+    </text>
+
+    <!-- Key Feature Pills (Foreground) -->
+    <g transform="translate(0, 240)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+        <text x="16" y="25" fill="#38ef7d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold">⚡ In-Store Tills</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(195, 0)">
+        <rect width="200" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+        <text x="16" y="25" fill="#00f2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold">📦 Inventory Sync</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(410, 0)">
+        <rect width="185" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+        <text x="16" y="25" fill="#93c5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold">🌐 Open Source</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(610, 0)">
+        <rect width="180" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+        <text x="16" y="25" fill="#fcd34d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold">💳 Unified Pay</text>
+      </g>
+    </g>
+  </g>
+</svg>
